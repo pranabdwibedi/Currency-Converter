@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link
+      rel="shortcut icon"
+      href="/Currency-Converter/unnamed.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/Currency-Converter/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <form action="">
+            <div class="valueInput">
+                <label for="amount">Amount :</label>
+                <input type="number" id="amount">
+            </div>
+            <div class="conversion">
+                <div class="from">
+                    <label for="fromCountry">FROM</label>
+                    <div class="dropDowns">
+                        <img src="https://flagsapi.com/US/flat/64.png" class="image"/>
+                        <select name="fromCountry" id="fromCountry" class="selects"></select>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-right-arrow-left" id="convertLogo"></i>
+                <div class="to">
+                    <label for="toCountry">To</label>
+                    <div class="dropDowns">
+                        <img src="https://flagsapi.com/IN/flat/64.png" class="image"/>
+                        <select name="toCountry" id="toCountry" class="selects"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="output">
+                <p id="outputText"></p>
+            </div>
+            <input type="button" value="Convert Currency" id="btn">
+        </form>
+    </div>
+    <script src="/Currency-Converter/codes.js"></script>
+    <script src="/Currency-Converter/logic.js"></script>
+  </body>
+</html>
