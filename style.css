@@ -38,7 +38,8 @@ form{
     width: 60%;
     height: 30px;
     border: none;
-    border-radius: 20px;
+    padding: 10px;
+    border-radius: 10px;
     margin-left: 10px;
 }
 #btn{

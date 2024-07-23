@@ -51,6 +51,9 @@ button.addEventListener("click",async (evt) => {
         amount.value = 1;
         count = 1
     }
+
+    
+
     let URL = `${baseURL}${toCurr.value}&base_currency=${fromCurr.value}&date=2024-07-22`;
     let response = await fetch(URL,options);
     data = await response.json();
