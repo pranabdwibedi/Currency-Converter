@@ -6,7 +6,7 @@
 body{
     min-width: 100vw;
     height: 100vh;
-    background-color: #FFFACC;
+    background-color: #37423D;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,14 +15,16 @@ body{
     width: 25vw;
     height: 70vh;
     padding: 20px;
-    background-color: #83BCFF;
+    background-color: #9A8873;
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    color: white;
-    box-shadow: 0 0 10px 5px #97D2FB;
+    color: #171614;
+}
+.container:hover{
+    box-shadow: 0 0 20px 5px #3A2618;
 }
 form{
     width: 95%;
@@ -47,9 +49,11 @@ form{
     height: fit-content;
     padding: 20px;
     background-color: #E1EFF6;
-    border: none;
-    box-shadow: 0 0 20px 5px black;
-    border-radius: 30px;
+    border: 0.5px solid blue;
+    border-radius: 10px;
+}
+#btn:hover{
+    box-shadow: 0 0 5px 5px #000000;
 }
 .dropDowns{
     height: fit-content;
@@ -85,4 +89,11 @@ form{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+#hiddenOutput{
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
 }
