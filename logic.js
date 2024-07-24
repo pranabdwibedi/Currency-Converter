@@ -1,11 +1,11 @@
-const baseURL ="https://api.currencyapi.com/v3/historical?apikey=cur_live_bAO5YkGs9a7clwho2zEdyyjZztV2ywq1pLIboQ73&currencies=INR&base_currency=EUR&date=2024-07-22";
+const baseURL ="https://api.currencyapi.com/v3/historical?apikey=cur_live_bAO5YkGs9a7clwho2zEdyyjZztV2ywq1pLIboQ73&currencies=";
 const dropDowns = document.querySelectorAll(".selects");
 const button = document.querySelector("#btn");
 const fromCurr = document.querySelector("#fromCountry");
 const toCurr = document.querySelector("#toCountry");
 const outPut = document.querySelector("#outputText")
-
-
+const outputBox = document.querySelector(".output")
+ 
 for (select of dropDowns) {
   for (currency in countryList) {
     let newOption = document.createElement("option");
@@ -41,7 +41,6 @@ const options = {
 };
 
 
-let data;
 
 button.addEventListener("click",async (evt) => {
     evt.preventDefault();
@@ -53,11 +52,14 @@ button.addEventListener("click",async (evt) => {
     }
 
     
-
-    let URL = `${baseURL}${toCurr.value}&base_currency=${fromCurr.value}&date=2024-07-22`;
+    let URL = `${baseURL}${toCurr.value}&base_currency=${fromCurr.value}&date=2024-07-23`;
     let response = await fetch(URL,options);
-    data = await response.json();
-    let exchangeValue = data.data["INR"].value;
+    let responseData = await response.json();
+
+    console.log(responseData);
+    //let Cvalue = `${toCurr.value}`;
+    let exchangeValue = responseData.data[`${toCurr.value}`].value;
     let total = exchangeValue*count;
-    outPut.innerText = `${count} ${fromCurr.value} = ${total} ${toCurr.value}`
+    outPut.innerHTML = `<b>${count} ${fromCurr.value} = ${total} ${toCurr.value}</b>`
+    outputBox.setAttribute("id","hiddenOutput")
 })
