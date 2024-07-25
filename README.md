@@ -29,7 +29,7 @@ You can see a live demo of the project [here](#).
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/currency-converter.git
+    git clone https://github.com/pranabdwibedi/Currency-Converter.git
     ```
 
 2. Navigate to the project directory:
@@ -83,5 +83,4 @@ Contributions are welcome! Please follow these steps to contribute:
 
 ## Acknowledgements
 
-- Exchange rate API provided by [API Provider].
-- Icons made by [Icon Designer] from [Icon Resource].
+- Exchange rate API provided by [app.currencyapi.com].
